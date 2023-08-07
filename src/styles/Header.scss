@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    padding: 45px 20px 50px 20px;
+    align-self: center;
+    max-width: 100vh;
+    justify-content: space-between;
+    align-items: center;
+  
+    nav {
+      ul {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 57px;
+        align-items: center;
+      }
+  
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #FF6060;
+          text-align: right;
+          font-family: Montserrat;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 142.6%;
+          &:hover,
+          &.active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
