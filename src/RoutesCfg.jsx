@@ -11,6 +11,7 @@ function RoutesConfig() {
           <Route exact path="/accueil" element={<Home/>} />
           <Route exact path="/logement/:id" element={<Logement/>} />
           <Route path="/a-propos" element={<APropos/>} />
+          <Route path="/page-non-trouvee" element={<PageNotFound/>} />
           <Route path="*" element={<PageNotFound/>} />
     </Routes>
   );

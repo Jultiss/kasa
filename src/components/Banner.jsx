@@ -1,16 +1,10 @@
-import image from '../assets/ImageSection.png'
-import '../styles/Banner.scss'
+function Banner({ bannerImg, bannerTitle, page }) {
+  return (
+    <div className={`banner ${page}`}>
+      <img src={bannerImg} alt={bannerTitle} />
+      <h1>{bannerTitle}</h1>
+    </div>
+  );
+}
 
-function Banner () {
-
-    return (
-        <section>
-            <div className='banner'>
-                <img src={image} alt="vue d'une côte sauvage au bord de l'océan" />
-                <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
-            </div>
-        </section>
-    );
-    }
-
-    export default Banner;
+export default Banner;

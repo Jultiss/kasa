@@ -1,30 +1,28 @@
 import React from "react";
-import inactiveStar from "../assets/star-inactive.png";
 import activeStar from "../assets/star-active.png";
+import inactiveStar from "../assets/star-inactive.png";
 
 function Rating({ rating }) {
-  const stars = [1, 2, 3, 4, 5];
-  return (
-    <div>
-      {stars.map((starNumber) =>
-        rating >= starNumber ? (
-          <img
-            key={starNumber.toString()}
-            className="star"
-            src={activeStar}
-            alt="Rating star"
-          />
-        ) : (
-          <img
-            key={starNumber.toString()}
-            className="star"
-            src={inactiveStar}
-            alt="Rating star"
-          />
-        )
-      )}
-    </div>
-  );
+    const stars = [1, 2, 3, 4, 5];
+
+    const renderStars = () => 
+        stars.map(starNumber => {
+            const imgSrc = rating >= starNumber ? activeStar : inactiveStar;
+            return (
+                <img
+                    key={starNumber}
+                    className="star"
+                    src={imgSrc}
+                    alt="Rating star"
+                />
+            );
+        });
+
+    return (
+        <div>
+            {renderStars()}
+        </div>
+    );
 }
 
 export default Rating;
