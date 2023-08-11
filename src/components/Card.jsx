@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Card.scss'
 
 function Card ({ logement }) {
   // Destructuration des propriétés de l'objet logement pour faciliter l'accès
@@ -16,9 +15,11 @@ function Card ({ logement }) {
           {/* Image de couverture du logement */}
           <img src={cover} alt={title} className="card-cover" />
           {/* Légende contenant le titre du logement */}
-          <figcaption className="card-body">
-            <h2 className="card-title">{title}</h2>
-          </figcaption>
+          <div className="overlay">
+            <figcaption>
+              <h2 className="card-title">{title}</h2>
+            </figcaption>
+          </div>
         </figure>
       </Link>
     </article>

@@ -1,0 +1,61 @@
+.card {
+    max-width: 340px;
+    height: 340px;
+    position: relative;
+    background: $primary;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0;
+     
+    &:hover {
+      transition: 0.5s;
+      transform: scale(1.1);
+    }
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1; 
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+        z-index: 2; 
+        pointer-events: none; 
+    }
+  
+    h2 {
+      position: absolute;
+      top: 250px;
+      left: 20px;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      max-width: 80%;
+      z-index: 3;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .card {
+      height: 255px;
+      max-width: 100%;
+  
+      &:hover {
+        transition: 0;
+        transform: scale(1);
+      }
+
+      h2 {
+          top: 180px; // Réduisez cette valeur pour la vue mobile
+      }
+    }
+}

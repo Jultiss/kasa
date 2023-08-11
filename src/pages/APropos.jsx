@@ -1,7 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Collapsible from "../components/Collapsible";
-
 import BannerAPropos from "../assets/BannerAPropos.png";
 
 // Tableau de données contenant les sections à propos, avec leur titre et contenu

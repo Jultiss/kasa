@@ -1,6 +1,5 @@
 import Card from './Card';
 import data from '../data/logements';
-import '../styles/Galery.css';
 
 function Galery () {
   return (

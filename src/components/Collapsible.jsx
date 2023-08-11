@@ -29,7 +29,7 @@ function Collapsible({ title, content }) {
                 <span className={`arrow ${isOpen ? "open" : "closed"}`}></span>
             </div>
             {/* Contenu repliable, seulement affiché si l'état est "ouvert" */}
-            {isOpen && <div className="collapse-content">{renderContent()}</div>}
+            {isOpen && <div className={`collapsible-content ${isOpen ? "open-content" : ""}`}>{renderContent()}</div>}
         </div>
     );
 }

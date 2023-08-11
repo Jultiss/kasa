@@ -2,7 +2,6 @@ import React from 'react';
 import Card from '../components/Card';
 import Banner from '../components/Banner';
 import data from '../data/logements';
-import '../styles/Home.scss';
 import BannerHome from '../assets/BannerHome.png';
 
 function Home() {

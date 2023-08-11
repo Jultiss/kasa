@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/Carrousel.scss';
 
 function Carrousel({ logement }) {
     // Utilisation du hook useState pour gérer l'image actuellement affichée
