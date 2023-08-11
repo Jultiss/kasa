@@ -1,8 +1,10 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Collapsible from "../components/Collapsible";
+
 import BannerAPropos from "../assets/BannerAPropos.png";
 
+// Tableau de données contenant les sections à propos, avec leur titre et contenu
 const aboutSections = [
     {
         title: "Fiabilité",
@@ -25,9 +27,12 @@ const aboutSections = [
 function APropos() {
     return (
         <div>
+            {/* Composant d'affichage de la bannière avec l'image et la page associée */}
             <Banner bannerImg={BannerAPropos} page="about" />
 
+            {/* Section qui contient des éléments repliables (Collapsible) */}
             <section className="about-collapsible">
+                {/* Boucle sur chaque section du tableau et rend un composant repliable */}
                 {aboutSections.map((section, index) => (
                     <Collapsible
                         key={index}

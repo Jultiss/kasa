@@ -5,16 +5,19 @@ import data from '../data/logements';
 import '../styles/Home.scss';
 import BannerHome from '../assets/BannerHome.png';
 
-const Home = () => {
+function Home() {
     return (
         <div>
+            {/* Affichage de la bannière avec son image et son titre */}
             <Banner
                 bannerImg={BannerHome}
                 bannerTitle="Chez vous, partout et ailleurs"
                 page="home"
             />
 
+            {/* Affichage de la liste des logements */}
             <div className="logements">
+                {/* Pour chaque logement dans les données, on affiche une carte */}
                 {data.map(logement => (
                     <Card logement={logement} key={logement.id} />
                 ))}
@@ -22,5 +25,4 @@ const Home = () => {
         </div>
     );
 }
-
 export default Home;
