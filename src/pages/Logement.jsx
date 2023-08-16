@@ -30,17 +30,16 @@ function Logement() {
     return (
         <div>
             <Carrousel logement={logement} />
-            <LogementHostSection logement={logement} />
-            <TagsAndRatingSection logement={logement} />
+            <LogementInfos logement={logement} />
             <CollapsibleSection logement={logement} />
         </div>
     );
 }
 
-// Section affichant les informations sur le logement et son hôte
-function LogementHostSection({ logement }) {
+// Section affichant infos, les tags et la note du logement
+function LogementInfos({ logement }) {
     return (
-        <div className="logement-host">
+        <div className="logement-infos">
             <div className="logement">
                 <h2>{logement.title}</h2>
                 <p>{logement.location}</p>
@@ -49,14 +48,6 @@ function LogementHostSection({ logement }) {
                 <h3>{logement.host.name}</h3>
                 <img src={logement.host.picture} alt={logement.host.name} />
             </div>
-        </div>
-    );
-}
-
-// Section affichant les tags et la note du logement
-function TagsAndRatingSection({ logement }) {
-    return (
-        <div className="tags-rating">
             <div className="tags">
                 {logement.tags.map(tag => (
                     <span key={tag}>{tag}</span>

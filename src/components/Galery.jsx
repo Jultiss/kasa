@@ -3,7 +3,7 @@ import data from '../data/logements';
 
 function Galery () {
   return (
-      <div className="Galery">
+      <div>
           {/* Boucle sur les données pour rendre chaque élément comme une carte */}
           {data.map((item) => (
               <Card key={item.id} item={item} />

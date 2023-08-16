@@ -28,8 +28,9 @@ function Collapsible({ title, content }) {
                 {/* Icône de flèche qui change en fonction de l'état ouvert/fermé */}
                 <span className={`arrow ${isOpen ? "open" : "closed"}`}></span>
             </div>
-            {/* Contenu repliable, seulement affiché si l'état est "ouvert" */}
-            {isOpen && <div className={`collapsible-content ${isOpen ? "open-content" : ""}`}>{renderContent()}</div>}
+            <div className={`collapsible-content ${isOpen ? "open-content" : ""}`}>
+            {renderContent()}
+            </div>
         </div>
     );
 }
