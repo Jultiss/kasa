@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Carrousel from "../components/Carrousel";
-import Rating from "../components/Rating";
-import Collapsible from "../components/Collapsible";
+import LogementInfos from "../components/LogementInfos";
+import CollapsibleSection from "../components/CollapsibleSection";
 import logements from "../data/logements";
 
 function Logement() {
@@ -32,40 +32,6 @@ function Logement() {
             <Carrousel logement={logement} />
             <LogementInfos logement={logement} />
             <CollapsibleSection logement={logement} />
-        </div>
-    );
-}
-
-// Section affichant infos, les tags et la note du logement
-function LogementInfos({ logement }) {
-    return (
-        <div className="logement-infos">
-            <div className="logement">
-                <h2>{logement.title}</h2>
-                <p>{logement.location}</p>
-            </div>
-            <div className="host">
-                <h3>{logement.host.name}</h3>
-                <img src={logement.host.picture} alt={logement.host.name} />
-            </div>
-            <div className="tags">
-                {logement.tags.map(tag => (
-                    <span key={tag}>{tag}</span>
-                ))}
-            </div>
-            <div className="rating">
-                <Rating rating={logement.rating} />
-            </div>
-        </div>
-    );
-}
-
-// Section affichant des informations dépliables du logement
-function CollapsibleSection({ logement }) {
-    return (
-        <div className="logement-collapsible">
-            <Collapsible title="Description" content={logement.description} />
-            <Collapsible title="Équipements" content={logement.equipments} />
         </div>
     );
 }

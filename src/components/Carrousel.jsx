@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 function Carrousel({ logement }) {
-    // Utilisation du hook useState pour gérer l'image actuellement affichée
     const [currentImage, setCurrentImage] = useState(0);
 
     // Fonction pour passer à l'image suivante
@@ -18,6 +17,9 @@ function Carrousel({ logement }) {
         setCurrentImage(prevIdx); // Mise à jour de l'image actuelle
     };
 
+    // Vérification du nombre d'images pour décider d'afficher les flèches
+    const showArrows = logement.pictures.length > 1;
+
     return (
         // Conteneur principal du carrousel
         <section className="carrousel">
@@ -27,11 +29,17 @@ function Carrousel({ logement }) {
             </div>
             {/* Navigation du carrousel : boutons précédent/suivant et compteur d'images */}
             <div className="carrousel-nav">
-                <button onClick={previousImage}>&lt;</button>
+                {/* Affichage conditionnel de la flèche précédente */}
+                {showArrows && (
+                    <button onClick={previousImage}>&lt;</button>
+                )}
                 <span className="carrousel-counter">
                     {currentImage + 1} / {logement.pictures.length}
                 </span>
-                <button onClick={nextImage}>&gt;</button>
+                {/* Affichage conditionnel de la flèche suivante */}
+                {showArrows && (
+                    <button onClick={nextImage}>&gt;</button>
+                )}
             </div>
         </section>
     );
