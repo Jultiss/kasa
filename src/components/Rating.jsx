@@ -21,7 +21,6 @@ function Rating({ rating }) {
                 />
             );
         });
-
     return (
         <div>
             {renderStars()}

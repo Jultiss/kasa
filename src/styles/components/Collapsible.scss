@@ -26,26 +26,24 @@
     .closed {
       transform: rotate(-135deg);
       -webkit-transform: rotate(-135deg);
-      transition: 0.2s;
+      transition: 1s ease-in-out;
     }
   
     .open {
       transform: rotate(-315deg);
       -webkit-transform: rotate(-315deg);
-      transition: 0.2s;
+      transition: 0.2s ease-in-out;
     }
   }
 
   .collapsible-content {
     overflow: hidden;
     max-height: 0;
-    opacity: 0;
-    transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
+    transition: max-height 0.8s ease-in-out;
   }
   
   .collapsible-content.open-content {
-    max-height: 1000px; // Augmentez cette valeur si nécessaire
-    opacity: 1;
+    max-height: 1000px; 
   }
   
         

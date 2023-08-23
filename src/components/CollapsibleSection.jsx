@@ -5,7 +5,8 @@ import Collapsible from './Collapsible';
 function CollapsibleSection({ logement }) {
     return (
         <div className="logement-collapsible">
-            <Collapsible title="Description" content={logement.description} />
+        {/* Utilisation du composant Collapsible pour afficher les informations dépliables */}
+            <Collapsible title="Description" content={logement.description} /> 
             <Collapsible title="Équipements" content={logement.equipments} />
         </div>
     );

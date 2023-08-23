@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import RoutesCfg from './RoutesCfg';
 
-
 function App() {
   return (
     <div>
