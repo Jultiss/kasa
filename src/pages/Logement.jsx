@@ -26,7 +26,6 @@ function Logement() {
     if (!logement) {
         return null;
     }
-
     return (
         <div>
             <Carrousel logement={logement} />
