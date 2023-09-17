@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Jultiss/kasa/static/css/main.00b4849b.css",
+    "main.js": "/Jultiss/kasa/static/js/main.a6e3d0b8.js",
+    "static/media/BannerAPropos.png": "/Jultiss/kasa/static/media/BannerAPropos.c7b52f14d9c1ddf3e224.png",
+    "static/media/BannerHome.png": "/Jultiss/kasa/static/media/BannerHome.e76961bbfb39d9c6c040.png",
+    "index.html": "/Jultiss/kasa/index.html",
+    "main.00b4849b.css.map": "/Jultiss/kasa/static/css/main.00b4849b.css.map",
+    "main.a6e3d0b8.js.map": "/Jultiss/kasa/static/js/main.a6e3d0b8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00b4849b.css",
+    "static/js/main.a6e3d0b8.js"
+  ]
+}
